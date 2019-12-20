@@ -1,0 +1,10 @@
+@InProceedings{ryan17FallDetection,
+author={Cameron, Ryan and Zuo, Zheming and Sexton, Graham and Yang, Longzhi",
+title={A Fall Detection/Recognition System and an Empirical Study of Gradient-Based Feature Extraction Approaches},
+booktitle={Advances in Computational Intelligence Systems},
+year={2018},
+publisher={Springer International Publishing},
+address={Cham},
+pages={276--289},
+isbn={978-3-319-66939-7},}
+

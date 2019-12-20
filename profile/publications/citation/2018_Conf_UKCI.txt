@@ -1,0 +1,9 @@
+@INPROCEEDINGS{noe18DCA,
+author={Elisa, Noe and Li, Jie and Zuo, Zheming and Yang, Longzhi},
+title={Dendritic Cell Algorithm with Fuzzy Inference System for Input Signal Generation},
+booktitle={Advances in Computational Intelligence Systems},
+year={2019},
+publisher={Springer International Publishing},
+address={Cham},
+pages={203--214},
+isbn={978-3-319-97982-3},}

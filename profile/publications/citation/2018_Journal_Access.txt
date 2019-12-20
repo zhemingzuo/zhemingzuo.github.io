@@ -1,0 +1,11 @@
+@ARTICLE{zuo18GazeLFD,
+author={Z. {Zuo} and L. {Yang} and Y. {Peng} and F. {Chao} and Y. {Qu}},
+journal={IEEE Access},
+title={Gaze-Informed Egocentric Action Recognition for Memory Aid Systems},
+year={2018},
+volume={6},
+number={},
+pages={12894-12904},
+doi={10.1109/ACCESS.2018.2808486},
+ISSN={2169-3536},
+month={},}

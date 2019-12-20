@@ -1,0 +1,11 @@
+@INPROCEEDINGS{zuo18GroomingDetection,
+author={Z. {Zuo} and J. {Li} and P. {Anderson} and L. {Yang} and N. {Naik}},
+booktitle={2018 IEEE International Conference on Fuzzy Systems (FUZZ-IEEE)},
+title={Grooming Detection using Fuzzy-Rough Feature Selection and Text Classification},
+year={2018},
+volume={},
+number={},
+pages={1-8},
+doi={10.1109/FUZZ-IEEE.2018.8491591},
+ISSN={null},
+month={July},}

@@ -1,0 +1,11 @@
+@INPROCEEDINGS{zuo19AdaTSK,
+author={Z. {Zuo} and J. {Li} and B. {Wei} and L. {Yang} and F. {Chao} and N. {Naik}},
+booktitle={2019 IEEE International Conference on Fuzzy Systems (FUZZ-IEEE)},
+title={Adaptive Activation Function Generation for Artificial Neural Networks through Fuzzy Inference with Application in Grooming Text Categorisation},
+year={2019},
+volume={},
+number={},
+pages={1-6},
+doi={10.1109/FUZZ-IEEE.2019.8858838},
+ISSN={1544-5615},
+month={June},}

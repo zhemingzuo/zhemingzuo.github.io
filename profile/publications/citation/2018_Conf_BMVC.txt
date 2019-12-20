@@ -1,0 +1,6 @@
+@INPROCEEDINGS{zuo18SstVladSstFv,
+    author    = {Zheming Zuo and Daniel Organisciak and Hubert P. H. Shum and Longzhi Yang},
+    title     = {Saliency-Informed Spatio-Temporal Vector of Locally Aggregated Descriptors and Fisher Vectors for Visual Action Recognition},
+    booktitle = {2018 BMVA British Machine Vision Conference (BMVC)},
+    pages     = {321.1--321.11},
+    year      = {2018}}

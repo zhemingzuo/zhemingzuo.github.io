@@ -1,0 +1,9 @@
+@INPROCEEDINGS{zuo19MengerSparseRule,
+author={Z. {Zuo} and J. {Li} and L. {Yang}},
+title={Curvature-Based Sparse Rule Base Generation for Fuzzy Interpolation Using Menger Curvature},
+booktitle={Advances in Computational Intelligence Systems},
+year={2020},
+publisher={Springer International Publishing},
+address={Cham},
+pages={53--65},
+isbn={978-3-030-29933-0},}

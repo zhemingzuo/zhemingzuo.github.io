@@ -1,0 +1,9 @@
+@ARTICLE{zuo2019EnhancedLFD,
+  title={Enhanced gradient-based local feature descriptors by saliency map for egocentric action recognition},
+  author={Zuo, Zheming and Wei, Bo and Chao, Fei and Qu, Yanpeng and Peng, Yonghong and Yang, Longzhi},
+  journal={Applied System Innovation},
+  volume={2},
+  number={1},
+  pages={7},
+  year={2019},
+  publisher={Multidisciplinary Digital Publishing Institute},}

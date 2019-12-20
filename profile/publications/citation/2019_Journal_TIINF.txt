@@ -1,0 +1,11 @@
+@ARTICLE{zuo19HFLSTD,
+author={Z. {Zuo} and L. {Yang} and Y. {Liu} and F. {Chao} and R. {Song} and Y. {Qu}},
+journal={IEEE Transactions on Industrial Informatics},
+title={Histogram of Fuzzy Local Spatio-Temporal Descriptors for Video Action Recognition},
+year={2019},
+volume={},
+number={},
+pages={1-1},
+doi={10.1109/TII.2019.2957268},
+ISSN={1941-0050},
+month={},}

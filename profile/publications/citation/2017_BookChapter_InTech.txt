@@ -1,0 +1,11 @@
+@INCOLLECTION{yang17FuzzyInterpolation,
+author = {Longzhi Yang and Zheming Zuo and Fei Chao and Yanpeng Qu},
+title = {Fuzzy Interpolation Systems and Applications},
+booktitle = {Modern Fuzzy Control Systems and Its Applications},
+publisher = {IntechOpen},
+address = {Rijeka},
+year = {2017},
+editor = {S. Ramakrishnan},
+chapter = {3},
+doi = {10.5772/68051},
+url = {https://doi.org/10.5772/68051},}

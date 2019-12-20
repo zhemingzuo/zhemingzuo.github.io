@@ -1,0 +1,11 @@
+@INPROCEEDINGS{philip19Grooming,
+author={P. {Anderson} and Z. {Zuo} and L. {Yang} and Y. {Qu}},
+booktitle={2019 IEEE International Conference on Fuzzy Systems (FUZZ-IEEE)},
+title={An Intelligent Online Grooming Detection System Using AI Technologies},
+year={2019},
+volume={},
+number={},
+pages={1-6},
+doi={10.1109/FUZZ-IEEE.2019.8858973},
+ISSN={1544-5615},
+month={June},}
