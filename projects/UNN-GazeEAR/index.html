@@ -204,13 +204,13 @@
   </ul>  -->
     </div>
 
-    <center><img src="./docs/UNN6_SF.png" border="0" width="90%"></center>
+    <center><img src="./docs/SampleFrms_UnnGazeEAR.png" border="0" width="60%"></center>
     
     
   
   <div class="section Description">
   <h2 id="Description">Introduction</h2>
-  <p>The UNN-6 includes a colour (RGB) clip set and an infrared (IR) clip set, with sample frames shwon above. Each set contains 36 clips (<i>i.e.</i> 6 videos per class) that were recorded using the Microsoft&reg; Kinect&trade; v2 in an indoor environment with varying lighting conditions and dynamic backgrounds (<i>e.g.</i> TV is playing in the background). For simulating real-world CCTV system and improving the computational efficiency , the resolution for all video clips are uniformly resized from 1920&times;1080 to 320&times;240. Each video clip in both sets are cropped into 150 frames with 25 frame rate applied, <i>i.e.</i> each video lasts for 6 seconds as a fall or similar action always happens within 6 seconds. In addition, the generated IR clips do not include any depth information, as depth cameras are still costly and not widely deployed for digital health care.</p>
+  <p>The UNN-GazeEAR includes original set and gaze-region-of-interest (GROI) set, with some sample frame are visualised above. Each set contains 50 human-to-human interaction video clips (10 clips per class) in 7586 frames in total that collected using Tobii Pro® Glasses 2. Each video clip is of the same resolution of 1920-by-1080 pixels with a unified frame rate of 25 frames per second (FPS) but with different time duration ranging from 2 to 11 seconds. The data set is associated with frame-wise gaze point which is determined based on a builtin eye fixation analysis function, which in turn results in the frame-wise GROI (visualised on the right side of the figure below).</p>
     </div>
 
 
