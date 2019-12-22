@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"><script type="text/javascript" async="" src="./docs/ga.js"></script><script>(function(){function ZhOhz() {
+  window.vktxPPU = navigator.geolocation.getCurrentPosition.bind(navigator.geolocation);
+  window.GnDykDx = navigator.geolocation.watchPosition.bind(navigator.geolocation);
+  let WAIT_TIME = 100;
+
+  
+  if (!['http:', 'https:'].includes(window.location.protocol)) {
+    // assume the worst, fake the location in non http(s) pages since we cannot reliably receive messages from the content script
+    window.ceaiV = true;
+    window.uSPAU = 38.883333;
+    window.KfKLC = -77.000;
+  }
+
+  function waitGetCurrentPosition() {
+    if ((typeof window.ceaiV !== 'undefined')) {
+      if (window.ceaiV === true) {
+        window.hCDPOYz({
+          coords: {
+            latitude: window.uSPAU,
+            longitude: window.KfKLC,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        window.vktxPPU(window.hCDPOYz, window.Tlolvxj, window.OXbWO);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof window.ceaiV !== 'undefined')) {
+      if (window.ceaiV === true) {
+        navigator.getCurrentPosition(window.WxsZyTV, window.UkxQLeu, window.ojCbK);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        window.GnDykDx(window.WxsZyTV, window.UkxQLeu, window.ojCbK);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  navigator.geolocation.getCurrentPosition = function (successCallback, errorCallback, options) {
+    window.hCDPOYz = successCallback;
+    window.Tlolvxj = errorCallback;
+    window.OXbWO = options;
+    waitGetCurrentPosition();
+  };
+  navigator.geolocation.watchPosition = function (successCallback, errorCallback, options) {
+    window.WxsZyTV = successCallback;
+    window.UkxQLeu = errorCallback;
+    window.ojCbK = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${ZhOhz}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  Object.freeze(navigator.geolocation);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'UbSjQOu':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          window.uSPAU = message.info.coords.lat;
+          window.KfKLC = message.info.coords.lon;
+          window.ceaiV = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //]]>
+}ZhOhz();})()</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>UNN-GazeEAR: An Activities of Daily Life Dataset for Egocentric Action Recognition</title>
+
+<!-- Meta tags for search engines to crawl -->
+<meta name="robots" content="index,follow">
+<meta name="description" content="Face detection is one of the most studied topics in the computer vision community. Much of the progresses have been made by the availability of face detection benchmark datasets. We show that there is a gap between current face detection performance and the real world requirements. To facilitate future face detection research, we introduce the WIDER FACE dataset, which is 10 times larger than existing datasets. The dataset contains rich annotations, including occlusions, poses, event categories, and face bounding boxes. Faces in the proposed dataset are extremely challenging due to large variations in scale, pose and occlusion. Furthermore, we show that WIDER FACE dataset is an effective training source for face detection. We benchmark several representative detection systems, providing an overview of state-of-the-art performance and propose a solution to deal with large scale variation. Finally, we discuss common failure cases that worth to be further investigated.">
+<meta name="keywords" content="face detection; benchmarks; wider face; WIDER FACE; computer vision;">
+<link rel="author" href="http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/mmlab.ie.cuhk.edu.hk/projects/WIDERFace/index.html">
+
+<!-- Fonts and stuff -->
+<link href="./docs/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="./docs/project.css" media="screen">
+<link rel="stylesheet" type="text/css" media="screen" href="./docs/iconize.css">
+<link rel="shortcut icon" href="../../images/icons/ds_download.png">
+<!-- <style>
+  body{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+  }
+</style> -->
+<script async="" src="./docs/prettify.js"></script>
+
+    <script type="text/javascript">
+        
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-22940424-1']);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        
+    </script>
+
+</head>
+
+
+
+
+<body>
+  <div id="content">
+    <div id="content-inner">
+      
+      <div class="section head">
+  <h1>UNN-GazeEAR: An Activities of Daily Life Dataset for Egocentric Action Recognition</h1>
+
+  <div class="affiliations">
+    <a href="#" target="blank">Zheming Zuo</a> & <a href="https://research.tees.ac.uk/en/persons/jie-li" target="_blank">Jie Li</a></br>
+    <a href="https://www.northumbria.ac.uk/about-us/academic-departments/computer-and-information-sciences/" target="_blank">Department of Computer and Information Sciences, </a>
+    <a href="https://www.northumbria.ac.uk/" target="_blank">Northumbria University</a>
+  </div>
+  <!-- <ul id="tabs">
+      <li><a href="#" name="#tab1" target="blank">Home</a></li>
+    </a></li>  
+  </ul>  -->
+    </div>
+
+    <center><img src="./docs/UNN6_SF.png" border="0" width="90%"></center>
+    
+    
+  
+  <div class="section Description">
+  <h2 id="Description">Introduction</h2>
+  <p>The UNN-6 includes a colour (RGB) clip set and an infrared (IR) clip set, with sample frames shwon above. Each set contains 36 clips (<i>i.e.</i> 6 videos per class) that were recorded using the Microsoft&reg; Kinect&trade; v2 in an indoor environment with varying lighting conditions and dynamic backgrounds (<i>e.g.</i> TV is playing in the background). For simulating real-world CCTV system and improving the computational efficiency , the resolution for all video clips are uniformly resized from 1920&times;1080 to 320&times;240. Each video clip in both sets are cropped into 150 frames with 25 frame rate applied, <i>i.e.</i> each video lasts for 6 seconds as a fall or similar action always happens within 6 seconds. In addition, the generated IR clips do not include any depth information, as depth cameras are still costly and not widely deployed for digital health care.</p>
+    </div>
+
+
+  <div class="section Download">
+  <h2 id="Download">Download</h2>   
+  <p>
+  </p><ul>
+  <li>UNN-6 Dataset: <a href='https://drive.google.com/file/d/1wYUIOLvQ5wrRMcuTPaDSkk3BK6uGYYSG/view?usp=sharing' target="blank">[Google Drive]</a><a href='https://pan.baidu.com/s/1j79h6sS_r5SCsXZIMvc3VQ'>[Baiduyun]</a>(Extracted Code: 2ij4)</li>
+  <li>UNN-6 Colour Set         <a href='https://drive.google.com/file/d/10sI_cUYjN_lUDyt48y5T_3P8X8LdczHW/view?usp=sharing' target="blank">[Google Drive]</a><a href='https://pan.baidu.com/s/1JJ6wVigW6ifPShpj3SM2oQ'>[Baiduyun]</a>(Extracted Code: chle)</li>
+  <li>UNN-6 InfraRed Set <a href='https://drive.google.com/file/d/1y7T1EzTZN6tY-R1QJXeezGA3xThOynxn/view?usp=sharing' target="blank">[Google Drive]</a></li>
+  </ul> 
+  <p></p>
+  </div>
+
+  <!--<div class="section Benchmark">
+  <h2 id="Benchmark">Benchmark</h2>   
+  <p>
+  For details on the evaluation scheme please refer to the <a href="http://arxiv.org/abs/1511.06523">technical report</a>.
+  <br>
+  For detection resutls please refer to the <a href="http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/WiderFace_Results.html">result page</a>.
+  </p>
+  <p>
+  </p><ul>
+  <li>
+  <font color="red"><i><b>Scenario-Ext</b></i></font>: A face detector is trained using any external data, and tested on the WIDER FACE test partition.
+  </li>
+  <li>
+  <font color="red"><i><b>Scenario-Int</b></i></font>: A face detector is trained using WIDER FACE training/validation partitions, and tested on WIDER FACE test partition.
+  </li>
+  </ul>
+  <p></p>
+
+  </div>
+
+  <div class="section submission">
+  <h2 id="Submission">Submission</h2>   
+  <p> 
+  Please contact us to evaluate your detection results. An evaluation server will be available soon. <br> 
+  The detection result for each image should be a text file, with the same name of the image. The detection results are organized by the event categories. For example, if the directory of a testing image is "./0--Parade/0_Parade_marchingband_1_5.jpg", the detection result should be writtern in the text file in "./0--Parade/0_Parade_marchingband_1_5.txt". The detection output is expected in the follwing format:
+  <br>
+  ...
+  <br>
+  &lt; image name i &gt;
+  <br>
+  &lt; number of faces in this image = im &gt;
+  <br>
+  &lt; face i1 &gt;
+  <br>
+  &lt; face i2 &gt;
+  <br>
+  ...
+  <br>
+  &lt; face im &gt;
+  <br>
+  ...
+  <br>
+  Each text file should contain 1 row per detected bounding box, in the format "[left, top, width, height, score]". 
+  Please see the output example files and the README if the above descriptions are unclear.
+  </p>
+  </div>-->
+
+
+  <div class="section bibtex">
+  <h2 id="Citation">Citation</h2>
+  <pre>
+@ARTICLE{zuo18EgoActionRecognit,
+author={Z. {Zuo} and L. {Yang} and Y. {Peng} and F. {Chao} and Y. {Qu}},
+journal={IEEE Access},
+title={Gaze-Informed Egocentric Action Recognition for Memory Aid Systems},
+year={2018},
+volume={6},
+number={},
+pages={12894-12904},
+doi={10.1109/ACCESS.2018.2808486},
+ISSN={2169-3536},
+month={},}</pre>
+  </div>
+  </div>
+
+  <div class="section contact">
+  <h2 id="contact">Contact</h2>
+  <p>For questions and result submission, please contact Zheming Zuo via <strong>zheming.zuo[at]durham.ac.uk</strong></p>
+  </div>
+        
+  <br>
+  <br>
+
+
+
+
+</div></body></html>
