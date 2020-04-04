@@ -1,0 +1,8 @@
+@ARTICLE{yang2020ImageUnderstandInPoorLighting, 
+author={W. {Yang} and Y. {Yuan} and W. {Ren} and J. {Liu} and W. J. {Scheirer} and Z. {Wang} and T. {Zhang} and Q. {Zhong} and D. {Xie} and S. {Pu} and Y. {Zheng} and Y. {Qu} and Y. {Xie} and L. {Chen} and Z. {Li} and C. {Hong} and H. {Jiang} and S. {Yang} and Y. {Liu} and X. {Qu} and P. {Wan} and S. {Zheng} and M. {Zhong} and T. {Su} and L. {He} and Y. {Guo} and Y. {Zhao} and Z. {Zhu} and J. {Liang} and J. {Wang} and T. {Chen} and Y. {Quan} and Y. {Xu} and B. {Liu} and X. {Liu} and Q. {Sun} and T. {Lin} and X. {Li} and F. {Lu} and L. {Gu} and S. {Zhou} and C. {Cao} and S. {Zhang} and C. {Chi} and C. {Zhuang} and Z. {Lei} and S. Z. {Li} and S. {Wang} and R. {Liu} and D. {Yi} and Z. {Zuo} and J. {Chi} and H. {Wang} and K. {Wang} and Y. {Liu} and X. {Gao} and Z. {Chen} and C. {Guo} and Y. {Li} and H. {Zhong} and J. {Huang} and H. {Guo} and J. {Yang} and W. {Liao} and J. {Yang} and L. {Zhou} and M. {Feng} and L. {Qin}}, 
+journal={IEEE Transactions on Image Processing}, 
+title={Advancing Image Understanding in Poor Visibility Environments: A Collective Benchmark Study}, 
+year={2020}, 
+volume={}, 
+number={}, 
+pages={1-1},}

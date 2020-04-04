@@ -29,6 +29,8 @@ div.zz {
   text-align: right;
 }
 
+#more {display: none;}
+
 /* The actual timeline (the vertical ruler) */
 .zztimeline {
   position: relative;
@@ -106,6 +108,12 @@ div.zz {
   border: medium solid #e17a7a;
   border-width: 10px 10px 10px 0;
   border-color: transparent #e17a7a transparent transparent;
+}
+
+.zz_button_trans{   
+background-color: Transparent;
+border: none;
+cursor:pointer;    
 }
 
 /* Fix the circle for containers on the right side */

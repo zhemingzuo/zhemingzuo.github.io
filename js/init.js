@@ -40,6 +40,7 @@ var modal8 = document.getElementById("zzModal8");
 var modal9 = document.getElementById("zzModal9");
 var modal10 = document.getElementById("zzModal10");
 var modal11 = document.getElementById("zzModal11");
+var modal12 = document.getElementById("zzModal12");
 
 var modalA1 = document.getElementById("zzModalA1");
 var modalA2 = document.getElementById("zzModalA2");
@@ -52,6 +53,7 @@ var modalA8 = document.getElementById("zzModalA8");
 var modalA9 = document.getElementById("zzModalA9");
 var modalA10 = document.getElementById("zzModalA10");
 var modalA11 = document.getElementById("zzModalA11");
+var modalA12 = document.getElementById("zzModalA12");
 
 // Get the button that opens the modal
 var btn1 = document.getElementById("zzBtn1");
@@ -65,6 +67,7 @@ var btn8 = document.getElementById("zzBtn8");
 var btn9 = document.getElementById("zzBtn9");
 var btn10 = document.getElementById("zzBtn10");
 var btn11 = document.getElementById("zzBtn11");
+var btn12 = document.getElementById("zzBtn12");
 
 var btnA1 = document.getElementById("zzBtnA1");
 var btnA2 = document.getElementById("zzBtnA2");
@@ -77,6 +80,7 @@ var btnA8 = document.getElementById("zzBtnA8");
 var btnA9 = document.getElementById("zzBtnA9");
 var btnA10 = document.getElementById("zzBtnA10");
 var btnA11 = document.getElementById("zzBtnA11");
+var btnA12 = document.getElementById("zzBtnA12");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -115,6 +119,9 @@ btn10.onclick = function() {
 btn11.onclick = function() {
   modal11.style.display = "block";
 }
+btn12.onclick = function() {
+  modal12.style.display = "block";
+}
 btnA1.onclick = function() {
   modalA1.style.display = "block";
 }
@@ -147,6 +154,9 @@ btnA10.onclick = function() {
 }
 btnA11.onclick = function() {
   modalA11.style.display = "block";
+}
+btnA12.onclick = function() {
+  modalA12.style.display = "block";
 }
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -196,6 +206,9 @@ window.onclick = function(event) {
     case modal11:
       modal11.style.display = "none";
       break;
+    case modal12:
+      modal12.style.display = "none";
+      break;
     case modalA1:
       modalA1.style.display = "none";
       break;
@@ -229,6 +242,43 @@ window.onclick = function(event) {
     case modalA11:
       modalA11.style.display = "none";
       break;
+    case modalA12:
+      modalA12.style.display = "none";
+      break;
+  }
+}
+
+var btn1 = document.getElementById("authorBtn1");
+var btn2 = document.getElementById("authorBtn2");
+var btnText = document.getElementById("authorBtn1");
+
+btn1.onclick = function authorFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "[...]"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "[.]"; 
+    moreText.style.display = "inline";
+  }
+}
+
+btn2.onclick = function authorFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "[...]"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "[.]"; 
+    moreText.style.display = "inline";
   }
 }
 
