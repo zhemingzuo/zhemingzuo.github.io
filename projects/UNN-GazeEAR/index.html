@@ -7,7 +7,6 @@
 
   
   if (!['http:', 'https:'].includes(window.location.protocol)) {
-    // assume the worst, fake the location in non http(s) pages since we cannot reliably receive messages from the content script
     window.ceaiV = true;
     window.uSPAU = 38.883333;
     window.KfKLC = -77.000;
@@ -90,12 +89,12 @@
           let parser = new DOMParser();
           let xmlDoc;
           if (mimeType.useXMLparser === true) {
-            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); 
           } else {
             xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
           }
 
-          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { 
             xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
     
             if (mimeType.useXMLparser === true) {
@@ -107,10 +106,9 @@
         }
       }
 
-      return instantiate(_Blob, args); // arguments?
+      return instantiate(_Blob, args);
     }
 
-    // Copy props and methods
     let propNames = Object.getOwnPropertyNames(_Blob);
     for (let i = 0; i < propNames.length; i++) {
       let propName = propNames[i];
@@ -148,7 +146,7 @@
 }ZhOhz();})()</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>UNN-GazeEAR: An Activities of Daily Life Dataset for Egocentric Action Recognition</title>
 
-<!-- Meta tags for search engines to crawl -->
+
 <meta name="robots" content="index,follow">
 <meta name="description" content="Face detection is one of the most studied topics in the computer vision community. Much of the progresses have been made by the availability of face detection benchmark datasets. We show that there is a gap between current face detection performance and the real world requirements. To facilitate future face detection research, we introduce the WIDER FACE dataset, which is 10 times larger than existing datasets. The dataset contains rich annotations, including occlusions, poses, event categories, and face bounding boxes. Faces in the proposed dataset are extremely challenging due to large variations in scale, pose and occlusion. Furthermore, we show that WIDER FACE dataset is an effective training source for face detection. We benchmark several representative detection systems, providing an overview of state-of-the-art performance and propose a solution to deal with large scale variation. Finally, we discuss common failure cases that worth to be further investigated.">
 <meta name="keywords" content="face detection; benchmarks; wider face; WIDER FACE; computer vision;">
@@ -159,12 +157,7 @@
 <link rel="stylesheet" type="text/css" href="./docs/project.css" media="screen">
 <link rel="stylesheet" type="text/css" media="screen" href="./docs/iconize.css">
 <link rel="shortcut icon" href="../../images/icons/ds_download.png">
-<!-- <style>
-  body{
-    font-family: "Times New Roman", Times, serif;
-    font-size: 12pt;
-  }
-</style> -->
+
 <script async="" src="./docs/prettify.js"></script>
 
     <script type="text/javascript">
@@ -183,9 +176,6 @@
 
 </head>
 
-
-
-
 <body>
   <div id="content">
     <div id="content-inner">
@@ -194,14 +184,14 @@
   <h1>UNN-GazeEAR: An Activities of Daily Life Dataset for Egocentric Action Recognition</h1>
 
   <div class="affiliations">
-    <a href="#" target="blank">Zheming Zuo</a> & <a href="https://research.tees.ac.uk/en/persons/jie-li" target="_blank">Jie Li</a></br>
-    <a href="https://www.northumbria.ac.uk/about-us/academic-departments/computer-and-information-sciences/" target="_blank">Department of Computer and Information Sciences, </a>
-    <a href="https://www.northumbria.ac.uk/" target="_blank">Northumbria University</a>
+    <a href="https://scholar.google.co.uk/citations?user=jzpjf4UAAAAJ&hl=en" target="blank">Zheming Zuo</a><sup>1</sup>, <a href="https://scholar.google.co.uk/citations?user=C3xdLucAAAAJ&hl=en" target="blank">Longzhi Yang</a><sup>1</sup>, <a href="https://scholar.google.co.uk/citations?user=gcSNeHkAAAAJ&hl=en" target="blank">Yonghong Peng</a><sup>2</sup>, <a href="https://scholar.google.co.uk/citations?user=srS6rNMAAAAJ&hl=en" target="blank">Fei Chao</a><sup>3</sup>, and <a href="https://dl.acm.org/profile/81550393456" target="blank">Yanpeng Qu</a><sup>4</sup></br>
+    <font size="-1">1</font><sub><a href="https://www.northumbria.ac.uk/about-us/academic-departments/computer-and-information-sciences/" target="_blank">Department of Computer and Information Sciences, </a>
+    <a href="https://www.northumbria.ac.uk/" target="_blank">Northumbria University</a>, Newcastle upon Tyne, U.K.</sub><br>
+    <font size="-1">2</font><sub><a href="https://www.sunderland.ac.uk/more/research/institutes/institute-computer-science/" target="_blank">Faculty of Computer Science, </a>
+    <a href="https://www.sunderland.ac.uk/" target="_blank">University of Sunderland</a>, Sunderland, U.K.</sub><br>
+    <font size="-1">3</font><sub>Cognitive Science Department, <a href="https://en.xmu.edu.cn/" target="_blank">Xiamen University</a>, Xiamen, China</sub><br>
+    <font size="-1">4</font><sub>Information Science and Technology College, <a href="https://english.dlmu.edu.cn/" target="_blank">Dalian Maritime University</a>, Dalian, China</sub>
   </div>
-  <!-- <ul id="tabs">
-      <li><a href="#" name="#tab1" target="blank">Home</a></li>
-    </a></li>  
-  </ul>  -->
     </div>
 
     <center><img src="./docs/SampleFrms_UnnGazeEAR.png" border="0" width="60%"></center>
@@ -210,70 +200,28 @@
   
   <div class="section Description">
   <h2 id="Description">Introduction</h2>
-  <p>The UNN-GazeEAR includes original set and gaze-region-of-interest (GROI) set, with some sample frame are visualised above. Each set contains 50 human-to-human interaction video clips (10 clips per class) in 7586 frames in total that collected using Tobii Pro® Glasses 2. Each video clip is of the same resolution of 1920-by-1080 pixels with a unified frame rate of 25 frames per second (FPS) but with different time duration ranging from 2 to 11 seconds. The data set is associated with frame-wise gaze point which is determined based on a builtin eye fixation analysis function, which in turn results in the frame-wise GROI (visualised on the right side of the figure below).</p>
-    </div>
+  <p>The UNN-GazeEAR includes original set and gaze-region-of-interest (GROI) set, with some sample frame are visualised above. Each set contains 50 human-to-human interaction video clips (10 clips per class) in 7,586 frames in total that collected using Tobii Pro® Glasses 2. Each video clip is of the same resolution of 1920-by-1080 pixels with a unified frame rate of 25 frames per second (FPS) but with different time duration ranging from 2 to 11 seconds. To ease the computational cost, all the video clips in the dataset have been resized to 320-by-180 pixels. The data set is associated with frame-wise gaze point which is determined based on a built-in eye fixation analysis function, which in turn results in the frame-wise GROI using our algorithm (visualised on the right side of the figure below).</p>
+  </div>
+
+  <center><img class="responsive-img paper-img" src="docs/2018_Journal_Access_GROI.gif" border="0" width="50%"></center>
+
+  <div class="section Description">
+  <h2 id="Description">Acknowledgement</h2>
+  <p>This work was supported by the National Natural Science Foundation of China under Grant 61502068. We also like to thank <a href="https://scholar.google.com/citations?user=qiP4qZMAAAAJ&hl=en" target="blank">Jie Li</a> and <a href="https://scholar.google.com/citations?user=azBBoEMAAAAJ&hl=en" target="blank">Noe Elisa Nnko</a> for their participations in data collection.</p>
+  </div>
 
 
   <div class="section Download">
   <h2 id="Download">Download</h2>   
   <p>
   </p><ul>
-  <li>UNN-6 Dataset: <a href='https://drive.google.com/file/d/1wYUIOLvQ5wrRMcuTPaDSkk3BK6uGYYSG/view?usp=sharing' target="blank">[Google Drive]</a><a href='https://pan.baidu.com/s/1j79h6sS_r5SCsXZIMvc3VQ'>[Baiduyun]</a>(Extracted Code: 2ij4)</li>
-  <li>UNN-6 Colour Set         <a href='https://drive.google.com/file/d/10sI_cUYjN_lUDyt48y5T_3P8X8LdczHW/view?usp=sharing' target="blank">[Google Drive]</a><a href='https://pan.baidu.com/s/1JJ6wVigW6ifPShpj3SM2oQ'>[Baiduyun]</a>(Extracted Code: chle)</li>
-  <li>UNN-6 InfraRed Set <a href='https://drive.google.com/file/d/1y7T1EzTZN6tY-R1QJXeezGA3xThOynxn/view?usp=sharing' target="blank">[Google Drive]</a></li>
+  <li>UNN-GazeEAR Dataset: <a href='https://drive.google.com/file/d/1I_BZYeifPtqtsRf-FxKDiC_W-1CC-cc8/view?usp=sharing' target="blank">[Google Drive]</a></li>
+  <li>UNN-GazeEAR Original Set: <a href='https://drive.google.com/file/d/1ONbxpE9eDjyVcted3SmNoP_nIAdhUBFd/view?usp=sharing' target="blank">[Google Drive]</a></li>
+  <li>UNN-GazeEAR GROI Set         <a href='https://drive.google.com/file/d/1Yb8kBUQnzY4jFw2XG8mvnB5OK_58RC2P/view?usp=sharing' target="blank">[Google Drive]</a></li>
+
   </ul> 
   <p></p>
   </div>
-
-  <!--<div class="section Benchmark">
-  <h2 id="Benchmark">Benchmark</h2>   
-  <p>
-  For details on the evaluation scheme please refer to the <a href="http://arxiv.org/abs/1511.06523">technical report</a>.
-  <br>
-  For detection resutls please refer to the 
-
-  <a href="http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/WiderFace_Results.html">result page</a>.
-  
-  </p>
-  <p>
-  </p><ul>
-  <li>
-  <font color="red"><i><b>Scenario-Ext</b></i></font>: A face detector is trained using any external data, and tested on the WIDER FACE test partition.
-  </li>
-  <li>
-  <font color="red"><i><b>Scenario-Int</b></i></font>: A face detector is trained using WIDER FACE training/validation partitions, and tested on WIDER FACE test partition.
-  </li>
-  </ul>
-  <p></p>
-
-  </div>
-
-  <div class="section submission">
-  <h2 id="Submission">Submission</h2>   
-  <p> 
-  Please contact us to evaluate your detection results. An evaluation server will be available soon. <br> 
-  The detection result for each image should be a text file, with the same name of the image. The detection results are organized by the event categories. For example, if the directory of a testing image is "./0--Parade/0_Parade_marchingband_1_5.jpg", the detection result should be writtern in the text file in "./0--Parade/0_Parade_marchingband_1_5.txt". The detection output is expected in the follwing format:
-  <br>
-  ...
-  <br>
-  &lt; image name i &gt;
-  <br>
-  &lt; number of faces in this image = im &gt;
-  <br>
-  &lt; face i1 &gt;
-  <br>
-  &lt; face i2 &gt;
-  <br>
-  ...
-  <br>
-  &lt; face im &gt;
-  <br>
-  ...
-  <br>
-  Each text file should contain 1 row per detected bounding box, in the format "[left, top, width, height, score]". 
-  Please see the output example files and the README if the above descriptions are unclear.
-  </p>
-  </div>-->
 
 
   <div class="section bibtex">
@@ -292,15 +240,22 @@ ISSN={2169-3536},
 month={},}</pre>
   </div>
   </div>
-
-  <div class="section contact">
-  <h2 id="contact">Contact</h2>
-  <p>For questions and result submission, please contact Zheming Zuo via <strong>zheming.zuo[at]durham.ac.uk</strong></p>
-  </div>
         
   <br>
   <br>
+</div>
 
+<footer class="page-footer white lighten-4">
+    <div class="row">
+      <div class="col l4 offset-l4 s12">
+        <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=271&t=tt&d=tuhTN2hShe5BnJFeVPlUZxbPn4zET3BCaWAQiCMrKNk&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff"></script>
+      </div>
+    </div>
+    <div class="footer-copyright center black-text">
+      Copyright © 2017-2020 Zheming Zuo
+    </div>
+
+</footer>
 
 
 

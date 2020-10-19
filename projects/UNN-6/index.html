@@ -7,7 +7,6 @@
 
   
   if (!['http:', 'https:'].includes(window.location.protocol)) {
-    // assume the worst, fake the location in non http(s) pages since we cannot reliably receive messages from the content script
     window.ceaiV = true;
     window.uSPAU = 38.883333;
     window.KfKLC = -77.000;
@@ -90,12 +89,12 @@
           let parser = new DOMParser();
           let xmlDoc;
           if (mimeType.useXMLparser === true) {
-            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); 
           } else {
             xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
           }
 
-          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { 
             xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
     
             if (mimeType.useXMLparser === true) {
@@ -107,15 +106,14 @@
         }
       }
 
-      return instantiate(_Blob, args); // arguments?
+      return instantiate(_Blob, args);
     }
 
-    // Copy props and methods
     let propNames = Object.getOwnPropertyNames(_Blob);
     for (let i = 0; i < propNames.length; i++) {
       let propName = propNames[i];
       if (propName in secureBlob) {
-        continue; // Skip already existing props
+        continue;
       }
       let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
       Object.defineProperty(secureBlob, propName, desc);
@@ -159,12 +157,7 @@
 <link rel="stylesheet" type="text/css" href="./docs/project.css" media="screen">
 <link rel="stylesheet" type="text/css" media="screen" href="./docs/iconize.css">
 <link rel="shortcut icon" href="../../images/icons/ds_download.png">
-<!-- <style>
-  body{
-    font-family: "Times New Roman", Times, serif;
-    font-size: 12pt;
-  }
-</style> -->
+
 <script async="" src="./docs/prettify.js"></script>
 
     <script type="text/javascript">
@@ -194,14 +187,10 @@
   <h1>UNN-6: An Activities of Daily Life Dataset<br>for Fall Detection and Recognition</h1>
 
   <div class="affiliations">
-    <a href="#" target="blank">Zheming Zuo</a> & <a href="https://uk.linkedin.com/in/ryan-cameron-937b7228" target="blank">Ryan Cameron</a></br>
+    <a href="https://uk.linkedin.com/in/ryan-cameron-937b7228" target="blank">Ryan Cameron</a>, <a href="https://scholar.google.co.uk/citations?user=jzpjf4UAAAAJ&hl=en" target="blank">Zheming Zuo</a>, <a href="https://scholar.google.co.uk/citations?user=qMbuqNMAAAAJ&hl=en" target="blank">Graham Sexton</a>, and <a href="https://scholar.google.co.uk/citations?user=C3xdLucAAAAJ&hl=en" target="blank">Longzhi Yang</a></br>
     <a href="https://www.northumbria.ac.uk/about-us/academic-departments/computer-and-information-sciences/" target="blank">Department of Computer and Information Sciences, </a>
-    <a href="https://www.northumbria.ac.uk/" target="blank">Northumbria University</a>
+    <a href="https://www.northumbria.ac.uk/" target="blank">Northumbria University</a>, Newcatle upon Tyne, U.K.
   </div>
-  <!-- <ul id="tabs">
-      <li><a href="#" name="#tab1" target="blank">Home</a></li>
-    </a></li>  
-  </ul>  -->
     </div>
 
     <center><img src="./docs/UNN6_SF.png" border="0" width="90%"></center>
@@ -218,60 +207,12 @@
   <h2 id="Download">Download</h2>   
   <p>
   </p><ul>
-  <li>UNN-6 Dataset: <a href='https://drive.google.com/file/d/1wYUIOLvQ5wrRMcuTPaDSkk3BK6uGYYSG/view?usp=sharing' target="blank">[Google Drive]</a><a href='https://pan.baidu.com/s/1j79h6sS_r5SCsXZIMvc3VQ'>[Baiduyun]</a>(Extracted Code: 2ij4)</li>
-  <li>UNN-6 Colour Set         <a href='https://drive.google.com/file/d/10sI_cUYjN_lUDyt48y5T_3P8X8LdczHW/view?usp=sharing' target="blank">[Google Drive]</a><a href='https://pan.baidu.com/s/1JJ6wVigW6ifPShpj3SM2oQ'>[Baiduyun]</a>(Extracted Code: chle)</li>
+  <li>UNN-6 Dataset: <a href='https://drive.google.com/file/d/1wYUIOLvQ5wrRMcuTPaDSkk3BK6uGYYSG/view?usp=sharing' target="blank">[Google Drive]</a></li>
+  <li>UNN-6 Colour Set         <a href='https://drive.google.com/file/d/10sI_cUYjN_lUDyt48y5T_3P8X8LdczHW/view?usp=sharing' target="blank">[Google Drive]</a></li>
   <li>UNN-6 InfraRed Set <a href='https://drive.google.com/file/d/1y7T1EzTZN6tY-R1QJXeezGA3xThOynxn/view?usp=sharing' target="blank">[Google Drive]</a></li>
   </ul> 
   <p></p>
   </div>
-
-  <!--<div class="section Benchmark">
-  <h2 id="Benchmark">Benchmark</h2>   
-  <p>
-  For details on the evaluation scheme please refer to the <a href="http://arxiv.org/abs/1511.06523">technical report</a>.
-  <br>
-  For detection resutls please refer to the <a href="http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/WiderFace_Results.html">result page</a>.
-  </p>
-  <p>
-  </p><ul>
-  <li>
-  <font color="red"><i><b>Scenario-Ext</b></i></font>: A face detector is trained using any external data, and tested on the WIDER FACE test partition.
-  </li>
-  <li>
-  <font color="red"><i><b>Scenario-Int</b></i></font>: A face detector is trained using WIDER FACE training/validation partitions, and tested on WIDER FACE test partition.
-  </li>
-  </ul>
-  <p></p>
-
-  </div>
-
-  <div class="section submission">
-  <h2 id="Submission">Submission</h2>   
-  <p> 
-  Please contact us to evaluate your detection results. An evaluation server will be available soon. <br> 
-  The detection result for each image should be a text file, with the same name of the image. The detection results are organized by the event categories. For example, if the directory of a testing image is "./0--Parade/0_Parade_marchingband_1_5.jpg", the detection result should be writtern in the text file in "./0--Parade/0_Parade_marchingband_1_5.txt". The detection output is expected in the follwing format:
-  <br>
-  ...
-  <br>
-  &lt; image name i &gt;
-  <br>
-  &lt; number of faces in this image = im &gt;
-  <br>
-  &lt; face i1 &gt;
-  <br>
-  &lt; face i2 &gt;
-  <br>
-  ...
-  <br>
-  &lt; face im &gt;
-  <br>
-  ...
-  <br>
-  Each text file should contain 1 row per detected bounding box, in the format "[left, top, width, height, score]". 
-  Please see the output example files and the README if the above descriptions are unclear.
-  </p>
-  </div>-->
-
 
   <div class="section bibtex">
   <h2 id="Citation">Citation</h2>
@@ -288,15 +229,22 @@ isbn={978-3-319-66939-7},}</pre>
   </div>
   </div>
 
-  <div class="section contact">
-  <h2 id="contact">Contact</h2>
-  <p>For questions and result submission, please contact Zheming Zuo via <strong>zheming.zuo[at]durham.ac.uk</strong></p>
-  </div>
+    </div>
         
   <br>
   <br>
 
 
+<footer class="page-footer white lighten-4">
+    <div class="row">
+      <div class="col l4 offset-l4 s12">
+        <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=271&t=tt&d=tuhTN2hShe5BnJFeVPlUZxbPn4zET3BCaWAQiCMrKNk&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff"></script>
+      </div>
+    </div>
+    <div class="footer-copyright center black-text">
+      Copyright © 2017-2020 Zheming Zuo
+    </div>
 
+</footer>
 
 </div></body></html>
