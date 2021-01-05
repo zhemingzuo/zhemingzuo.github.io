@@ -142,9 +142,20 @@ cursor:pointer;
 }
 
 .publication-section{
-    background: #f7f7f7;
+  background: #f7f7f7;
 }
 
+.activities-section{
+  background: white;
+}
+
+.education-section{
+  background: #f7f7f7;
+}
+
+.awards-section{
+  background: white;
+}
 
 .title{
     font-size: 20pt;
