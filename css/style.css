@@ -145,16 +145,20 @@ cursor:pointer;
   background: #f7f7f7;
 }
 
-.activities-section{
+.preprints-section{
   background: white;
 }
 
-.education-section{
+.activities-section{
   background: #f7f7f7;
 }
 
-.awards-section{
+.education-section{
   background: white;
+}
+
+.awards-section{
+  background: #f7f7f7;
 }
 
 .title{
