@@ -1,0 +1,8 @@
+@article{long_su_shi_zuo_li_2021, 
+author={Long, Yang and Su, Yixin and Shi, Binhua and Zuo, Zheming and Li, Jie},
+title={A Multi-subpopulation Bacterial Foraging Optimisation Algorithm with Deletion and Immigration Strategies for Unmanned Surface Vehicle Path Planning},
+DOI={10.1007/s11370-021-00361-y}, 
+journal={Intelligent Service Robotics}, 
+publisher={Springer},  
+year={2021}, 
+pages={1–10},}
