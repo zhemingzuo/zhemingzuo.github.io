@@ -1,8 +1,10 @@
 @article{long_zuo_su_li_zhang_2020, 
-author={Long, Yang and Zuo, Zheming and Su, Yixin and Li, Jie and Zhang, Huajun},
-title={An A*-based Bacterial Foraging Optimisation Algorithm for Global Path Planning of Unmanned Surface Vehicles}, 
-DOI={10.1017/S0373463320000247}, 
+author={Long, Yang and Zuo, Zheming and Su, Yixin and Li, Jie and Zhang, Huajun}, 
+title={An A*-based Bacterial Foraging Optimisation Algorithm for Global Path Planning of Unmanned Surface Vehicles},  
+DOI={10.1017/S0373463320000247},  
 journal={Journal of Navigation}, 
-publisher={Cambridge University Press},  
-year={2020}, 
-pages={1–16},}
+publisher={Cambridge University Press}, 
+year={2020},
+volume={73},
+number={6},
+pages={1247–1262}}
