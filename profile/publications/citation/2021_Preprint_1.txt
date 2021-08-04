@@ -1,6 +1,6 @@
 @article{zuo2021curvature,
   title={Curvature-based Feature Selection with Application in Classifying Electronic Health Records},
-  author={Zuo, Zheming and Li, Jie and Moubayed, Noura Al},
+  author={Zuo, Zheming and Li, Jie and Xu, Han and Moubayed, Noura Al},
   journal={arXiv preprint arXiv:2101.03581},
   year={2021}
 }
