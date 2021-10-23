@@ -5,4 +5,5 @@ title={Advancing Image Understanding in Poor Visibility Environments: A Collecti
 year={2020}, 
 volume={29}, 
 number={}, 
-pages={5737-5752},}
+pages={5737-5752},
+doi={10.1109/TIP.2020.2981922},}

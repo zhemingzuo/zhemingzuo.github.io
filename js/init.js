@@ -44,6 +44,7 @@ var modal12 = document.getElementById("zzModal12");
 var modal13 = document.getElementById("zzModal13");
 var modal14 = document.getElementById("zzModal14");
 var modal15 = document.getElementById("zzModal15");
+var modal16 = document.getElementById("zzModal16");
 
 var modalA1 = document.getElementById("zzModalA1");
 var modalA2 = document.getElementById("zzModalA2");
@@ -60,6 +61,7 @@ var modalA12 = document.getElementById("zzModalA12");
 var modalA13 = document.getElementById("zzModalA13");
 var modalA14 = document.getElementById("zzModalA14");
 var modalA15 = document.getElementById("zzModalA15");
+var modalA16 = document.getElementById("zzModalA16");
 
 // Get the button that opens the modal
 var btn1 = document.getElementById("zzBtn1");
@@ -77,6 +79,7 @@ var btn12 = document.getElementById("zzBtn12");
 var btn13 = document.getElementById("zzBtn13");
 var btn14 = document.getElementById("zzBtn14");
 var btn15 = document.getElementById("zzBtn15");
+var btn16 = document.getElementById("zzBtn16");
 
 var btnA1 = document.getElementById("zzBtnA1");
 var btnA2 = document.getElementById("zzBtnA2");
@@ -93,6 +96,7 @@ var btnA12 = document.getElementById("zzBtnA12");
 var btnA13 = document.getElementById("zzBtnA13");
 var btnA14 = document.getElementById("zzBtnA14");
 var btnA15 = document.getElementById("zzBtnA15");
+var btnA16 = document.getElementById("zzBtnA16");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -143,6 +147,9 @@ btn14.onclick = function() {
 btn15.onclick = function() {
   modal15.style.display = "block";
 }
+btn16.onclick = function() {
+  modal16.style.display = "block";
+}
 btnA1.onclick = function() {
   modalA1.style.display = "block";
 }
@@ -187,6 +194,9 @@ btnA14.onclick = function() {
 }
 btnA15.onclick = function() {
   modalA15.style.display = "block";
+}
+btnA16.onclick = function() {
+  modalA16.style.display = "block";
 }
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -248,6 +258,9 @@ window.onclick = function(event) {
     case modal15:
       modal15.style.display = "none";
       break;
+    case modal16:
+      modal16.style.display = "none";
+      break;
     case modalA1:
       modalA1.style.display = "none";
       break;
@@ -292,6 +305,9 @@ window.onclick = function(event) {
       break;
     case modalA15:
       modalA15.style.display = "none";
+      break;
+    case modalA16:
+      modalA16.style.display = "none";
       break;
   }
 }

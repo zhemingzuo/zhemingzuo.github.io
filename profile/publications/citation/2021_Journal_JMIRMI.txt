@@ -1,0 +1,10 @@
+@ARTICLE{Zuo2021DataAnon, 
+author={Zuo, Zheming and Watson, Matthew and Budgen, David and Hall, Robert and Kennelly, Chris and Al Moubayed, Noura}, 
+journal={JMIR Medical Informatics}, 
+title={Data Anonymization for Pervasive Health Care: Systematic Literature Mapping Study},
+year={2021}, 
+volume={9}, 
+number={10}, 
+pages={e29871},
+publisher={JMIR Publications Inc.},
+doi={10.2196/29871},}
