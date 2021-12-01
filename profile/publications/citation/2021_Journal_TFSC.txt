@@ -1,0 +1,17 @@
+@article{zuo2021curvature,
+  title = {Curvature-based Feature Selection with Application in Classifying Electronic Health Records},
+  author = {Zuo, Zheming and Li, Jie and Xu, Han and Moubayed, Noura Al},
+  journal = {Technological Forecasting and Social Change},
+  volume = {173},
+  pages = {121--127},
+  issn = {0040-1625},
+  doi = {https://doi.org/10.1016/j.techfore.2021.121127},
+  year = {2021}
+}
+
+@article{zuo2021curvature,
+  title={Curvature-based Feature Selection with Application in Classifying Electronic Health Records},
+  author={Zuo, Zheming and Li, Jie and Xu, Han and Moubayed, Noura Al},
+  journal={arXiv preprint arXiv:2101.03581},
+  year={2021}
+}
