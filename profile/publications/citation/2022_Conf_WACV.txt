@@ -1,0 +1,8 @@
+@InProceedings{Zuo_IdeaNet_2022_WACV,
+    author    = {Zuo, Zheming and Chen, Xinyu and Xu, Han and Li, Jie and Liao, Wenjuan and Yang, Zhi-Xin and Wang, Shizheng},
+    title     = {IDEA-Net: Adaptive Dual Self-Attention Network for Single Image Denoising},
+    booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) Workshops},
+    month     = {January},
+    year      = {2022},
+    pages     = {739-748}
+}
