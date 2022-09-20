@@ -1,0 +1,12 @@
+@InProceedings{Zuo_Unseen_2022_IoTBDS,
+	author       = {Xu, Han and Zuo, Zheming and Li, Jie and Chang, Victor},
+	title        = {Seen to Unseen: When Fuzzy Inference System Predicts IoT Device Positioning Labels That Had Not Appeared in Training Phase},
+	booktitle    = {Proceedings of the 7th International Conference on Internet of Things, Big Data and Security - IoTBDS,},
+	year         = {2022},
+	pages        = {281-288},
+	publisher    = {SciTePress},
+	organization = {INSTICC},
+	doi          = {10.5220/0011102800003194},
+	isbn         = {978-989-758-564-7},
+	issn         = {2184-4976},
+}
