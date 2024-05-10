@@ -1,0 +1,8 @@
+@InProceedings{Zuo_DCF_2024_CVPRW,
+    author    = {Zuo, Zheming and Smith, Joseph and Stonehouse, Jonathan and Obara, Boguslaw},
+    title     = {Robust and Explainable Fine-Grained Visual Classification with Transfer Learning: A Dual-Carriageway Framework},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
+    month     = {June},
+    year      = {2024},
+    location  = {Seattle, USA}
+}
