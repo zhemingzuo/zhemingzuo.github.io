@@ -1,0 +1,8 @@
+@InProceedings{Zuo_AMRF_2024_ECCVW,
+    author    = {Zuo, Zheming and Smith, Joseph and Stonehouse, Jonathan and Obara, Boguslaw},
+    title     = {An Augmentation-based Model Re-adaptation Framework for Robust Image Segmentation},
+    booktitle = {Proceedings of the European Conference on Computer Vision (ECCV) Workshops},
+    month     = {October},
+    year      = {2024},
+    location  = {Milan, Italy}
+}
