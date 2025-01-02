@@ -1,0 +1,8 @@
+@InProceedings{Xiao_FedGA_2025_AAAI,
+    author    = {Xiao, Chenguang and Zuo, Zheming and Wang, Shuo},
+    title     = {FedGA: Federated Learning with Gradient Alignment for Error Asymmetry Mitigation},
+    booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence (AAAI) Workshops},
+    month     = {March},
+    year      = {2025},
+    location  = {Philadelphia, USA}
+}
