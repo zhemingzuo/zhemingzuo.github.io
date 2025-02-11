@@ -79,6 +79,7 @@ var modalV17 = document.getElementById("zzModalV17");
 // var modalV18 = document.getElementById("zzModalV18");
 var modalV20 = document.getElementById("zzModalV20");
 var modalV21 = document.getElementById("zzModalV21");
+var modalV21A = document.getElementById("zzModalV21A");
 
 // Get the button that opens the modal
 var btn1 = document.getElementById("zzBtn1");
@@ -131,6 +132,7 @@ var btnV17 = document.getElementById("zzBtnV17");
 // var btnV18 = document.getElementById("zzBtnV18");
 var btnV20 = document.getElementById("zzBtnV20");
 var btnV21 = document.getElementById("zzBtnV21");
+var btnV21A = document.getElementById("zzBtnV21A");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -279,6 +281,9 @@ btnV20.onclick = function() {
 }
 btnV21.onclick = function() {
   modalV21.style.display = "block";
+}
+btnV21A.onclick = function() {
+  modalV21A.style.display = "block";
 }
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -438,6 +443,9 @@ window.onclick = function(event) {
       break;
     case modalV21:
       modalV21.style.display = "none";
+      break;
+    case modalV21A:
+      modalV21A.style.display = "none";
       break;
   }
 }
