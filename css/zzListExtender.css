@@ -1,0 +1,24 @@
+/* To support "Show more" and "Show less" in list */
+
+.expandable-list li {
+  display: none; /* Hidden by default */
+  flex-wrap: wrap; /* Keep the original flex layout */
+}
+
+/* Initially display the first 4 items */
+.expandable-list li:nth-child(-n+4) {
+  display: flex;
+}
+
+.toggle-btn {
+  cursor: pointer;
+  color: #52ADC8;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.button-container {
+  margin-top: 10px;
+}

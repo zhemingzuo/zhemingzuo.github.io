@@ -209,7 +209,7 @@ nav.white {
   transition:0.5s;
 }
 .profile-link a:hover {
-  color: #3BB9FF;
+  color: #52ADC8;
   -o-transition:0.5s;
   -ms-transition:0.5s;
   -moz-transition:0.5s;
@@ -364,7 +364,7 @@ nav.white {
 }
 
 a {
-  color: #002db3;
+  color: #52ADC8;
   -o-transition:0.5s;
   -ms-transition:0.5s;
   -moz-transition:0.5s;
