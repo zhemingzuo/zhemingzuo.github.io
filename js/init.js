@@ -484,8 +484,4 @@ btn2.onclick = function authorFunction() {
   }
 }
 
-
-
-
-
 })
